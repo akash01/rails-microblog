@@ -39,5 +39,6 @@ describe "Static Page" do # this line is description string and can be anything
 			expect(page).to have_title("Ruby on Rails Tutorial Sample App | About")
 		end
 	end
+
 end
 
