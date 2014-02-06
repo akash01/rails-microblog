@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Static Pag" do # this line is description string and can be anything
+describe "Static Page" do # this line is description string and can be anything
 
 	describe "Home Page" do  # this line is description string and can be anything
 	  
