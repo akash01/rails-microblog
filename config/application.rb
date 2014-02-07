@@ -20,6 +20,9 @@ module Microblog
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    #to get rid of [deprecated] I18n.enforce_available_locales will default to true in the future
+    I18n.enforce_available_locales = true
+
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   end
 end
