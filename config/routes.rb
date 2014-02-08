@@ -6,11 +6,15 @@ Microblog::Application.routes.draw do
   get "about" => "static_pages#about"
   get "contact" => "static_pages#contact"
   
-  get "signup" => "users#new"
-  resources :microposts
-
   root 'users#index'
   resources :users
+  get "signup" => "users#new"
+
+  resources :microposts
+
+  resources :sessions, only: [:new, :create, :destroy]
+  get "signin" => "sessions#new"
+  get "signout" => "sessions#destroy" , via: "delete"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -152,3 +152,7 @@ aside {
   @extend .has-error; /* this gives color to fields*/
 }
 
+
+div.alert.alert-error {
+  background-color: #F5D5A9;
+}
