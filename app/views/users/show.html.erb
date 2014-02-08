@@ -1,4 +1,14 @@
+<% @title = @user.name %>
 <p id="notice"><%= notice %></p>
+
+<aside class="row">
+	<section class="col col-lg-2">
+		<h1>
+			<%= gravatar_for @user %>
+			<%= @user.name %>	
+		</h1>
+	</section>
+</aside>
 
 <p>
   <strong>Name:</strong>
