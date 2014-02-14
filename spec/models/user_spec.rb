@@ -13,6 +13,8 @@ describe User do
   it { should respond_to(:password_confirmation) }
   it { should respond_to(:remember_token) }  ## we use remember token which is saved as cookie to track user
   it { should respond_to(:authenticate) }
+  it { should respond_to(:admin) }
+  it { should_not be_admin }
 
   it { should be_valid } # just sanity check , subject @user is initially valid
   #above line long way
@@ -20,6 +22,15 @@ describe User do
   #	expect(@user).to be_valid
   #end
 
+  describe "with admin attribute set to 'true'" do
+    before do
+      @user.save!
+      @user.toggle!(:admin)
+    end
+
+    it { should be_admin }
+  end
+  
   describe "when name is not present" do
   	before { @user.name = "" }
   	it { should_not be_valid }

@@ -17,6 +17,11 @@ group :test do
   gem 'capybara', '2.1.0'
   gem 'factory_girl_rails' ## to use model objects 
 end
+gem 'faker' # to get dummy data for this app
+
+# pagination
+gem 'will_paginate', '~> 3.0'
+gem 'will_paginate-bootstrap'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
