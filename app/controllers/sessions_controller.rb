@@ -10,13 +10,13 @@ class SessionsController < ApplicationController
       sign_in user
       redirect_to user
     else
-      flash[:error] = 'Invalid email/password combination' # Not quite right!
+      flash.now[:error] = 'Invalid email/password combination' # Not quite right!
       render 'new'
     end
   end
 
   def destroy
-    
+    sign_out
+    redirect_to root_url
   end
 end
-start from 8.2.1 Remember me --- sign-in-out

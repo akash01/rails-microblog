@@ -11,6 +11,7 @@ describe User do
   it { should respond_to(:password_digest) }
   it { should respond_to(:password) }
   it { should respond_to(:password_confirmation) }
+  it { should respond_to(:remember_token) }  ## we use remember token which is saved as cookie to track user
   it { should respond_to(:authenticate) }
 
   it { should be_valid } # just sanity check , subject @user is initially valid
@@ -103,4 +104,9 @@ describe User do
        specify { expect(user_for_invalid_password).to be_false }
      end
    end
+
+   describe "remember token" do
+    before { @user.save }
+    its(:remember_token) { should_not be_blank }
+  end
 end
