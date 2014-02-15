@@ -3,7 +3,7 @@
 
 <%= form_for @user ,:html => {:class => "form-horizontal"} do |f| %>
 
-  <%= render 'shared/error_messages' %>
+  <%= render 'shared/error_messages', object: f.object %> <!-- f.object is @user and @micropost in micropost . so error file both user and micropost can share-->
 
   <div class="form-group">
     <%= f.label(:name, :class => "col-sm-2 control-label") %>
