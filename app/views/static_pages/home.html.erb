@@ -1,17 +1,20 @@
 <% @title = "Home" %>
 <% if signed_in? %>
 <section class="row">
-  <div class="col col-lg-3">
+  <div class="col col-sm-5">
     <aside>
       <section>
         <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/stats' %>
       </section>
       <section>
         <%= render 'shared/micropost_form' %>
       </section>
     </aside>
   </div>
-  <div class="col col-lg-8">
+  <div class="col col-sm-7">
       <h3>Micropost Feed</h3>
       <%= render 'shared/feed' %>
     </div>

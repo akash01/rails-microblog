@@ -1,7 +1,8 @@
 @import "bootstrap";
 
 $grayMediumLight: #eaeaea;
-$grayMediumLight: #eaeaea;
+$grayLighter: #eee;
+$blue: #3bbfce;
 
 body {
 	padding: 70px;
@@ -100,7 +101,7 @@ footer ul li {
 aside {
   section {
     padding: 10px 0;
-    border-top: 1px solid $grayMediumLight;
+    border-top: 1px solid $grayLighter;
     &:first-child {
       border: 0;
       padding-top: 0;
@@ -164,9 +165,9 @@ div.alert.alert-error {
   li {
     overflow: auto;
     padding: 10px 0;
-    border-top: 1px solid $grayMediumLight;
+    border-top: 1px solid $grayLighter;
     &:last-child {
-      border-bottom: 1px solid $grayMediumLight;
+      border-bottom: 1px solid $grayLighter;
     }
   }
 }
@@ -186,7 +187,7 @@ div.alert.alert-error {
   display: block;
 }
 .timestamp {
-  color: $grayMediumLight;
+  color: $grayLighter;
 }
 .gravatar {
   float: left;
@@ -196,5 +197,27 @@ aside {
   textarea {
     height: 100px;
     margin-bottom: 5px;
+    width: inherit;
+  }
+}
+
+.stats {
+  overflow: auto;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $grayLighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $blue;
+    }
+  }
+  strong {
+    display: block;
   }
 }
